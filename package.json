@@ -1,6 +1,26 @@
 {
-  "dependencies": {
-    "express": "^4.18.2",
-    "nodemon": "^3.0.2"
-  }
+   "dependencies": {
+      "express": "^4.18.2",
+      "got": "^14.0.0",
+      "nodemon": "^3.0.2"
+   },
+   "scripts": {
+      "start": "node server.js"
+   },
+   "name": "clear",
+   "version": "1.0.0",
+   "main": "server.js",
+   "devDependencies": {},
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/lubomir80/Node---Weather.git"
+   },
+   "author": "",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/lubomir80/Node---Weather/issues"
+   },
+   "homepage": "https://github.com/lubomir80/Node---Weather#readme",
+   "type": "module",
+   "description": ""
 }
