@@ -1,8 +1,10 @@
 import express from "express"
 import got from 'got';
+import 'dotenv/config'
 const app = express();
 
-const PORT = 8080;
+const PORT = process.env.PORT || 8080;
+const thirdPartApiKey = process.env.WEATHER_API_KEY
 const thirdPartBaseURL = "http://api.weatherbit.io/v2.0/current";
 
 
@@ -10,7 +12,7 @@ app.get("/weather", async (req, res) => {
    try {
       const response = await got.get(`${thirdPartBaseURL}`, {
          searchParams: {
-            key: "a5fb8647584148f6a85a0ad1d44a11d9",
+            key: thirdPartApiKey,
             lat: "52.134717",
             lon: "21.004241"
          },
@@ -27,7 +29,6 @@ app.listen(PORT, (err) => {
    if (err) console.error("Error at server launch");
    console.log(`${PORT} is working`);
 })
-
 
 
 
